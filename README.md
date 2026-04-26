@@ -1,4 +1,4 @@
-# 📄 DocuMind — Intelligent Document Q&A Engine
+# 📄 DocuMind:Intelligent Document Q&A Engine
 
 An end-to-end RAG (Retrieval-Augmented Generation) pipeline that lets users upload PDFs and ask natural language questions against them.
 
@@ -8,11 +8,11 @@ An end-to-end RAG (Retrieval-Augmented Generation) pipeline that lets users uplo
 ## 🧠 How It Works
 
 1. **Upload** a PDF document
-2. **Ingestion** — text is extracted, chunked into 512-token pieces
-3. **Embedding** — chunks are converted to vectors using `all-MiniLM-L6-v2`
-4. **Storage** — vectors stored in ChromaDB for fast retrieval
-5. **Query** — user asks a question, hybrid search finds relevant chunks
-6. **Answer** — Groq LLM (Llama 3.1) generates a grounded answer with confidence scoring
+2. **Ingestion** : text is extracted, chunked into 512-token pieces
+3. **Embedding** : chunks are converted to vectors using `all-MiniLM-L6-v2`
+4. **Storage** : vectors stored in ChromaDB for fast retrieval
+5. **Query** : user asks a question, hybrid search finds relevant chunks
+6. **Answer** : Groq LLM (Llama 3.1) generates a grounded answer with confidence scoring
 
 ## 🛠 Tech Stack
 
@@ -28,23 +28,23 @@ An end-to-end RAG (Retrieval-Augmented Generation) pipeline that lets users uplo
 
 ## ✨ Key Features
 
-- **Hybrid Search** — combines semantic (70%) and keyword (30%) search for better retrieval
-- **Confidence Scoring** — flags low-certainty answers to reduce hallucinations
-- **Source Attribution** — shows which document chunks were used to generate the answer
-- **Document Management** — upload, query, and delete documents
+- **Hybrid Search** : combines semantic (70%) and keyword (30%) search for better retrieval
+- **Confidence Scoring** : flags low-certainty answers to reduce hallucinations
+- **Source Attribution** : shows which document chunks were used to generate the answer
+- **Document Management** : upload, query, and delete documents
 
 ## 📊 Design Decisions
 
 ### Chunk Size
 Used 512 tokens with 50 token overlap after experimenting with 256 and 1024:
-- 256 tokens — too granular, lost context
-- 512 tokens — best balance of context and precision
-- 1024 tokens — too broad, reduced retrieval accuracy
+- 256 tokens : too granular, lost context
+- 512 tokens : best balance of context and precision
+- 1024 tokens : too broad, reduced retrieval accuracy
 
 ### Embedding Model
 Chose `all-MiniLM-L6-v2` over OpenAI embeddings:
-- Runs completely locally — zero cost
-- 384-dimensional vectors — fast and memory efficient
+- Runs completely locally : zero cost
+- 384-dimensional vectors : fast and memory efficient
 - Strong performance on semantic similarity tasks
 
 ### Hybrid Search
