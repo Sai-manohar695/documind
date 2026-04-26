@@ -95,21 +95,6 @@ streamlit run app.py
 
 7. Open http://localhost:8501
 
-## 📁 Project Structure
-documind/
-├── backend/
-│   ├── main.py           # FastAPI app
-│   ├── ingestion.py      # PDF processing & chunking
-│   ├── embeddings.py     # Sentence transformer embeddings
-│   ├── vectorstore.py    # ChromaDB operations
-│   ├── retriever.py      # Hybrid search
-│   ├── qa_chain.py       # LLM Q&A pipeline
-│   └── confidence.py     # Confidence scoring
-├── frontend/
-│   └── app.py            # Streamlit UI
-├── evaluation/
-│   └── evaluate.py       # Evaluation pipeline
-└── requirements.txt
 
 ## 🔮 Future Improvements
 
