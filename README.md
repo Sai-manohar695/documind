@@ -3,7 +3,7 @@
 An end-to-end RAG (Retrieval-Augmented Generation) pipeline that lets users upload PDFs and ask natural language questions against them.
 
 ## 🚀 Live Demo
-[DocuMind on Streamlit Cloud](your-streamlit-url-here)
+[DocuMind on Streamlit Cloud](https://pdf-engine.streamlit.app/)
 
 ## 🧠 How It Works
 
